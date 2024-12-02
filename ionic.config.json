@@ -1,0 +1,7 @@
+{
+  "name": "herramienta-requerimientos",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

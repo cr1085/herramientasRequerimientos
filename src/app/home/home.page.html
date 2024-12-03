@@ -1,20 +1,28 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>Bienvenido</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-padding">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Inicio</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="welcome-container">
+    <ion-icon name="bulb-outline" size="large" color="warning"></ion-icon>
+    <h1>Bienvenido a tu herramienta de gestión</h1>
+    <p>
+      Simplifica la captura de requerimientos y comienza a diseñar soluciones
+      personalizadas para tus clientes de manera rápida e intuitiva.
+    </p>
+
+    <!-- Botón de Navegación -->
+    <ion-button expand="block" size="large" color="secondary" routerLink="/requerimientos">
+      <ion-icon slot="start" name="clipboard-outline"></ion-icon>
+      Capturar Requerimientos
+    </ion-button>
   </div>
 </ion-content>

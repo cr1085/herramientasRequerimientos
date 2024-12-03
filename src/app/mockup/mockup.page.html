@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mockup Generado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ mockup.tipoProyecto }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Colores:</strong> {{ mockup.colores }}</p>
+      <p><strong>Descripción:</strong> {{ mockup.descripcion }}</p>
+      <p><strong>Funcionalidades:</strong></p>
+      <ul>
+        <li *ngFor="let funcionalidad of mockup.funcionalidades">{{ funcionalidad }}</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

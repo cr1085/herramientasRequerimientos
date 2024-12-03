@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Captura de Requerimientos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full" class="ion-padding">
+    <!-- Tipo de Proyecto -->
+    <ion-item>
+      <ion-label position="stacked">Tipo de Proyecto</ion-label>
+      <ion-select [(ngModel)]="requerimientos.tipoProyecto" placeholder="Selecciona uno">
+        <ion-select-option value="web">Aplicación Web</ion-select-option>
+        <ion-select-option value="movil">Aplicación Móvil</ion-select-option>
+        <ion-select-option value="desktop">Aplicación de Escritorio</ion-select-option>
+        <ion-select-option value="otro">Otro</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <!-- Público Objetivo -->
+    <ion-item>
+      <ion-label position="stacked">Público Objetivo</ion-label>
+      <ion-input [(ngModel)]="requerimientos.publicoObjetivo" placeholder="E.g., estudiantes, clientes, empresas"></ion-input>
+    </ion-item>
+
+    <!-- Problema o Necesidad -->
+    <ion-item>
+      <ion-label position="stacked">Problema o Necesidad</ion-label>
+      <ion-textarea [(ngModel)]="requerimientos.problema" placeholder="Describe qué problema quieres resolver"></ion-textarea>
+    </ion-item>
+
+    <!-- Funcionalidades Clave -->
+    <ion-item>
+      <ion-label position="stacked">Funcionalidades Clave</ion-label>
+      <ion-select [(ngModel)]="requerimientos.funcionalidades" multiple="true" placeholder="Selecciona funcionalidades">
+        <ion-select-option value="login">Login de Usuario</ion-select-option>
+        <ion-select-option value="notificaciones">Notificaciones</ion-select-option>
+        <ion-select-option value="mapa">Mapa Interactivo</ion-select-option>
+        <ion-select-option value="reportes">Generación de Reportes</ion-select-option>
+        <ion-select-option value="ecommerce">E-commerce</ion-select-option>
+        <ion-select-option value="chat">Chat en Tiempo Real</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <!-- Colores Preferidos -->
+    <ion-item>
+      <ion-label position="stacked">Colores Preferidos</ion-label>
+      <ion-input [(ngModel)]="requerimientos.colores" placeholder="E.g., Azul, Blanco, Verde"></ion-input>
+    </ion-item>
+
+    <!-- Presupuesto Aproximado -->
+    <ion-item>
+      <ion-label position="stacked">Presupuesto Aproximado</ion-label>
+      <ion-input [(ngModel)]="requerimientos.presupuesto" placeholder="E.g., $5000, $10,000"></ion-input>
+    </ion-item>
+
+    <!-- Fecha Esperada -->
+    <ion-item>
+      <ion-label position="stacked">Fecha de Entrega Esperada</ion-label>
+      <ion-datetime [(ngModel)]="requerimientos.fechaEntrega" display-format="MMM DD, YYYY"></ion-datetime>
+    </ion-item>
+  </ion-list>
+
+  <!-- Botón Guardar -->
+  <ion-button expand="block" color="secondary" (click)="submitForm()">
+    Guardar Requerimientos
+  </ion-button>
+
+  <!-- Botón Limpiar -->
+  <ion-button expand="block" color="light" (click)="resetForm()">
+    Limpiar Formulario
+  </ion-button>
+
+  <!-- Botón Volver al Home -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="primary" routerLink="/home">
+      <ion-icon name="home-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
+</ion-content>

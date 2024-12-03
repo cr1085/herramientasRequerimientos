@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'requerimientos',
+    loadChildren: () => import('./requerimientos/requerimientos.module').then( m => m.RequerimientosPageModule)
+  },
+  {
+    path: 'mockup',
+    loadChildren: () => import('./mockup/mockup.module').then( m => m.MockupPageModule)
+  },
+  {
+    path: 'inicial',
+    loadChildren: () => import('./inicial/inicial.module').then( m => m.InicialPageModule)
+  },
 ];
 
 @NgModule({

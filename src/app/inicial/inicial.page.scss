@@ -1,0 +1,53 @@
+.landing-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .info-section {
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .info-section h2 {
+    color: #3880ff;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .info-section p {
+    font-size: 1rem;
+    color: #4d4d4d;
+    line-height: 1.5;
+  }
+  
+  .landing-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+  
+  .form-section {
+    flex: 1;
+    max-width: 40%;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-section h3 {
+    margin-bottom: 20px;
+    color: #222;
+    font-size: 1.5rem;
+  }
+  
+  ion-item {
+    margin-bottom: 15px;
+  }
+  
